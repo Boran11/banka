@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+
+int sayi;
+int binler,yuzler,onlar,birler;
+
+printf("Lutfen 4 basamakli bir sayi giriniz:");
+scanf("%d",&sayi);
+if(sayi>=1000 && sayi<=9999)// 4 Basamaklı Sayı Olduğundan Emin Olmak İçin
+{
+binler=sayi/1000;  //Binler Basamağını Bulmak İçin
+sayi=sayi-(binler*1000); //Kalan Sayıları Bulmak İçin
+yuzler=sayi/100;	//Yüzler Basmağını Bulmak İçin
+sayi=sayi-(yuzler*100); 
+onlar=sayi/10;     //Onlar Basamağını Bulmak  İçin
+sayi=sayi-(onlar*10);  
+birler=sayi;
+printf("%d tane binlik sayi\n",binler);
+printf("%d tane yuzluk sayi\n",yuzler);
+printf("%d tane onluk sayi \n",onlar);
+printf("%d tane birlik sayi\n",birler);
+}
+
+else
+printf("Girdiginiz Sayi 4 basamakli degil:\n");
+return 0;  
+}
